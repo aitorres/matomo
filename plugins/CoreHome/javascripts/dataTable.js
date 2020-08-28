@@ -25,7 +25,8 @@ var exports = require('piwik/UI'),
  *
  * To find a datatable element by report (ie, 'DevicesDetection.getBrowsers'),
  * use piwik.DataTable.getDataTableByReport.
- *
+ *PHP code should use our Matomo code standards (see next section)
+
  * To get the dataTable JS instance (an instance of this class) for a
  * datatable HTML element, use $(element).data('uiControlObject').
  *
@@ -1817,7 +1818,7 @@ $.extend(DataTable.prototype, UIControl.prototype, {
     },
 
     handleSummaryRow: function (domElem) {
-        var details = _pk_translate('General_LearnMore', [' (<a href="https://matomo.org/faq/how-to/faq_54/" rel="noreferrer noopener" target="_blank">', '</a>)']);
+        var details = _pk_translate('General_LearnMore', [' (<a href="https://matomo.org/docs/managing-your-databases-size/" rel="noreferrer noopener" target="_blank">', '</a>)']);
 
         domElem.find('tr.summaryRow').each(function () {
             var labelSpan = $(this).find('.label .value').filter(function(index, elem){
